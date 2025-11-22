@@ -43,7 +43,7 @@ function onSubmit(e) {
   showLoader();
 
   getImagesByQuery(query)
-    .then(({ data: { hits: images } }) => {
+    .then(images => {
       if (images.length === 0) {
         iziToast.error({
           title: 'Error',
